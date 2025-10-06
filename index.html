@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +7,15 @@
     <link rel="stylesheet" href="assets/css/estilo.css">
 </head>
 <body>
-    <header>
-        <h1>Lista de Tarefas</h1>
-    </header>
+    <div class="container">
+        <h1>Minha Lista de Tarefas 📝</h1>
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="Digite uma tarefa...">
+            <button id="addBtn">Adicionar</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
 
-    <main>
-        <section>
-            <form class="task-form">
-                <input type="text"id="task-input" placeholder="Digite uma tarefa..." required>
-                <button type="submit">Adicionar</button>
-            </form>
-
-            <ul class="task-list">
-
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>Feito com S2 em HTML, CSS e JavaScript</p>
-    </footer>
-    
     <script src="assets/js/script.js"></script>
 </body>
 </html>

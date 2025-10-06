@@ -1,32 +1,42 @@
-const form = document.getElementById("task-form");
-const input = document.getElementById("task-input");
-const list = document.getElementById("task-list");
+// Selecionando elementos do DOM
+const input = document.getElementById("taskInput");
+const addBtn = document.getElementById("addBtn");
+const taskList = document.getElementById("taskList");
 
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
+// Função para adicionar uma nova tarefa
+addBtn.addEventListener("click", function() {
     const taskText = input.value.trim();
-    if (taskText === "") return;
 
+    if (taskText === "") {
+        alert("Digite uma tarefa primeiro!");
+        return;
+    }
+
+    // Criando o elemento <li>
     const li = document.createElement("li");
     li.textContent = taskText;
 
-    // Botão concluir
-    li.addEventListener("click", () => {
+    // Botão de concluir
+    const doneBtn = document.createElement("button");
+    doneBtn.textContent = "✔";
+    doneBtn.addEventListener("click", function() {
         li.classList.toggle("completed");
     });
 
-    // Botão remover
+    // Botão de remover
     const removeBtn = document.createElement("button");
-    removeBtn.textContent = "X";
-    removeBtn.addEventListener("click", (e) => {
-        e.stopPropagation(); // evira marcar como concluída no botão
-        li.remove();
-    })    
+    removeBtn.textContent = "❌";
+    removeBtn.addEventListener("click", function() {
+        taskList.removeChild(li);
+    });
 
+    // Adiciona os botões ao li
+    li.appendChild(doneBtn);
     li.appendChild(removeBtn);
-    list.appendChild(li);
 
+    // Adiciona o li à lista
+    taskList.appendChild(li);
+
+    // Limpa o campo de texto
     input.value = "";
-    
 });
