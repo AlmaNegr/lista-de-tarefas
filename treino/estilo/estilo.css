@@ -1,15 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body, html {
+html, body {
     height: 100vh;
-    width: 100vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
 }
 
-.heade-container {
-    background-color: blue;
+header {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    background: rgb(28, 27, 27);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header h1 {
+    color: rgb(45, 45, 197);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+header p {
+    color: white;
+    font-size: 1.25rem;
+}
+
+.tarefa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 5%;
+    min-height: 100px;
+    max-width: 800px;
+    gap: 5px;
+    width: 50%;
+    background-color: rgb(250, 246, 246);
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 1px 2px rgb(159, 159, 209);
+}
+
+label {
+    font-weight: 700;
+}
+
+#taskInput {
+    padding: 5px;
+    border: none;
+    border-radius: 7px;
+    border: 1px solid rgb(146, 146, 217)
+}
+
+#addBtn {
+    padding: 5px 10px;
+    font-weight: 700;
+    background-color: rgb(140, 140, 246);
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0px 0px 1px 2px rgb(86, 86, 213);
+}
+
+#lista {
+    list-style: none;
+    padding: 10px;
+    min-height: 50px;
+    width: 50%;
+    border-radius: 10px;
+    margin: 10px auto;
+    background-color: black;
+    color: blue;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#lista li {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 5px;
+    background-color: green;
+    
+}
+
+.completed {
+    
+    text-decoration: line-through;
+    opacity: 0.6;
+    color: gray;
 }

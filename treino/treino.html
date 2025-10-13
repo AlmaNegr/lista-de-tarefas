@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de tarefa</title>
+    <title>Lista de tarefas</title>
     <link rel="stylesheet" href="estilo/estilo.css">
 </head>
 <body>
-    <header class="head-container">
-        <h1>Lista de tarefas</h1>
-        <p>Crie sua lista</p>
-    </header>
+
     <main>
-        <section class="container-tarefa">
-            <div class="addTarefa">
-                <input type="text" id="taskInput" placeholder="Adicione sua tarefa">
-                <button id="addBtn">Enviar</button>
-            </div>
-            <ul id="lista-tarefa">
+
+        <header>
+            <h1>Lista de tarefa</h1>
+            <p>Suas tarefas serão adicionadas aqui.</p>
+        </header>
+
+        <section class="tarefa">
+            <label>
+                Tarefa:
+                <input type="text" name="taskInput" id="taskInput">
+            </label>
+            <button id="addBtn">Enviar</button>
+        </section>
+
+        <section class="lista">
+            <ul id="lista">
 
             </ul>
         </section>
